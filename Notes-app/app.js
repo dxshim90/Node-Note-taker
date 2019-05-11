@@ -6,4 +6,4 @@ const msg = getNotes();
 
 console.log(msg);
 
-console.log(chalk.green("Success!"));
+console.log(chalk.italic.inverse.blue("Error!"));

@@ -1,6 +1,9 @@
-const add = require("./utility.js");
+const validator = require("validator");
+
 const getNotes = require("./notes.js");
 
-const sum = add(5, 8);
+const msg = getNotes();
 
-console.log(getNotes());
+console.log(msg);
+
+console.log(validator.isURL("dandan"));

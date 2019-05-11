@@ -1,3 +1,6 @@
-const name = require("./utility.js");
+const add = require("./utility.js");
+const getNotes = require("./notes.js");
 
-console.log(name);
+const sum = add(5, 8);
+
+console.log(getNotes());

@@ -51,8 +51,30 @@ const removeNote = title => {
   }
 };
 
+const listNotes = () => {
+  const notes = loadNotes();
+  notes.forEach(note => {
+    console.log(notes.title);
+  });
+};
+
+const readNote = title => {
+  const notes = loadNotes();
+  const foundNote = notes.find(note => {
+    return note.title === title;
+  });
+  if (foundNote) {
+    console.log(foundNote.title);
+    console.log(foundNote.body);
+  } else {
+    console.log("No note found");
+  }
+};
+
 module.exports = {
   getNotes: getNotes,
   addNote: addNote,
-  removeNote: removeNote
+  removeNote: removeNote,
+  listNotes: listNotes,
+  readNote: readNote
 };

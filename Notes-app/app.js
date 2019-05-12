@@ -48,8 +48,8 @@ yargs.command({
 yargs.command({
   command: "read",
   describe: "Reading a note",
-  handler: function() {
-    console.log("reading a note");
+  handler: argv => {
+    notes.readNote(argv.title);
   }
 });
 
@@ -57,8 +57,8 @@ yargs.command({
 yargs.command({
   command: "list",
   describe: "List all notes",
-  handler: function() {
-    console.log("list all notes");
+  handler: () => {
+    notes.listNotes();
   }
 });
 
